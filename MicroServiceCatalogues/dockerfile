@@ -1,0 +1,4 @@
+FROM openjdk:8
+EXPOSE 8989
+ADD target/MicroServiceCatalogues-0.0.1-SNAPSHOT.jar MicroServiceCatalogues.jar
+ENTRYPOINT ["java","-jar","MicroServiceCatalogues.jar"]

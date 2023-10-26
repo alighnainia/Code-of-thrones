@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3d0537e-7104-4a96-a567-404e00d0a2f0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SS0qWIn8CZZU4e6xvnHPCrlVBw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Saturn1/Desktop/Projects/Développement d'une plateforme pharmaceutique personnalisée/backend/authentification/src/main/java/com/project/authentification&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c48fb18ab9d562b42911cddcdc0c855f&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Saturn1\Desktop\Projects\Développement d'une plateforme pharmaceutique personnalisée\backend\authentification\src\main\java\com\project\authentification" />
+      <recent name="C:\Users\Saturn1\Desktop\Projects\Développement d'une plateforme pharmaceutique personnalisée\backend\authentification\src\main\java\com\project\authentification\Payload\Request" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.authentification.Controller" />
+      <recent name="com.project.authentification.Entity" />
+      <recent name="com.project.authentification.Service" />
+      <recent name="com.project.authentification.Security" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn dependency:tree" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="auth" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="auth" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthentificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Authentification" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.authentification.AuthentificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3d0537e-7104-4a96-a567-404e00d0a2f0" name="Changes" comment="" />
+      <created>1689124868772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689124868772</updated>
+      <workItem from="1689124870593" duration="4600000" />
+      <workItem from="1689175591958" duration="3274000" />
+      <workItem from="1689192191445" duration="11371000" />
+      <workItem from="1689252754610" duration="3198000" />
+      <workItem from="1689286368370" duration="3035000" />
+      <workItem from="1689349782221" duration="2426000" />
+      <workItem from="1689666389539" duration="1505000" />
+      <workItem from="1689812297804" duration="769000" />
+      <workItem from="1691104388592" duration="575000" />
+      <workItem from="1691457424590" duration="1939000" />
+      <workItem from="1691486535987" duration="11957000" />
+      <workItem from="1691527248919" duration="3968000" />
+      <workItem from="1691707595670" duration="2265000" />
+      <workItem from="1691798071050" duration="6222000" />
+      <workItem from="1691842748843" duration="4419000" />
+      <workItem from="1691941461679" duration="870000" />
+      <workItem from="1692207786879" duration="667000" />
+      <workItem from="1692462897927" duration="2501000" />
+      <workItem from="1692563849717" duration="1737000" />
+      <workItem from="1692625772517" duration="1763000" />
+      <workItem from="1692870906277" duration="1845000" />
+      <workItem from="1693147121966" duration="1718000" />
+      <workItem from="1693162587151" duration="11000" />
+      <workItem from="1693178689184" duration="40000" />
+      <workItem from="1693233797412" duration="28000" />
+      <workItem from="1693237834822" duration="2162000" />
+      <workItem from="1693261451979" duration="4941000" />
+      <workItem from="1693311163504" duration="22701000" />
+      <workItem from="1693398314324" duration="12838000" />
+      <workItem from="1693429223425" duration="5087000" />
+      <workItem from="1693443036013" duration="1943000" />
+      <workItem from="1693524315841" duration="1211000" />
+      <workItem from="1694388459644" duration="1375000" />
+      <workItem from="1694440644366" duration="1272000" />
+      <workItem from="1694560803518" duration="3732000" />
+      <workItem from="1694609231470" duration="3804000" />
+      <workItem from="1694730247845" duration="601000" />
+      <workItem from="1695387721544" duration="2494000" />
+      <workItem from="1697803756913" duration="3272000" />
+      <workItem from="1697896295404" duration="4736000" />
+      <workItem from="1697928982221" duration="1149000" />
+      <workItem from="1697933699368" duration="750000" />
+      <workItem from="1697935075222" duration="1756000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

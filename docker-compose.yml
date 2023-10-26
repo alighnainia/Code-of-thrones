@@ -1,0 +1,263 @@
+version: "2.4"
+services:
+
+
+#Base de donne authen
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: authen
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - estory
+#Base de donne reclamation
+  reclamationestory:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: reclamationestory
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-reclamationdata:/var/lib/postgresql/data
+    networks:
+      - estory
+
+
+#Catalogues database
+  EStory:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: EStory
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres-EStory:/var/lib/postgresql/data
+    networks:
+      - estory
+
+
+
+
+#CoursPrive database
+  CoursPrive:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: CoursPrive
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres-CoursPrive:/var/lib/postgresql/data
+    networks:
+      - estory
+
+
+#Evaluation database
+  evaluationdata:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: evaluationdata
+    ports:
+      - "5437:5432"
+    volumes:
+      - postgres-evaluationdata:/var/lib/postgresql/data
+    networks:
+      - estory
+
+
+#Eureka
+  eurekaserver:
+    build:
+      context: ./E-storyEurekaServer
+    ports:
+      - "8761:8761"
+    image: "eurekaserver"
+    networks:
+      - estory
+
+
+
+
+#APIGateWay
+  estoryapigateway:
+    build:
+      context: ./E-storyAPI---GateWay
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+    ports:
+      - "8098:8098"
+    image: "estoryapigateway"
+    depends_on:
+      - eurekaserver
+    networks:
+      - estory
+
+
+# Authentification
+  authentification:
+    build:
+      context: ./authentification
+    ports:
+      - "8093:8093"
+    image: "authentification"
+    depends_on:
+      - eurekaserver
+      - keycloak
+      - postgres
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/authen
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_CLIENT_ID=authentification
+      - KEYCLOAK_CLIENT_SECRET=384e70cb-1b45-4d03-b65e-10595f7373b1
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth
+      - KEYCLOAK_USER=admin   
+      - KEYCLOAK_PASSWORD=admin
+    networks:  
+      - estory
+
+
+
+#reclamation
+  reclamation:
+    build:
+      context: ./ReclamationMicroservice
+    ports:
+      - "8091:8091"
+    image: "reclamation"
+    depends_on:
+      - eurekaserver
+      - authentification
+      - reclamationestory
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://reclamationestory:5432/reclamationestory
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_CLIENT_ID=ReclamationMicroservice
+      - KEYCLOAK_CLIENT_SECRET=beb7e689-e19f-4a92-b404-63c3d9e8a3bf
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth
+      - KEYCLOAK_USER=admin   
+      - KEYCLOAK_PASSWORD=admin
+    networks:  
+      - estory
+
+
+
+#catalogues
+  catalogues:
+    build:
+      context: ./MicroServiceCatalogues
+    ports:
+      - "8989:8989"
+    image: "catalogues"
+    depends_on:
+      - eurekaserver
+      - authentification
+      - EStory
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://EStory:5432/EStory
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_CLIENT_ID=CatalogueMicroservice
+      - KEYCLOAK_CLIENT_SECRET=3fe675fd-2a59-4b22-9c0b-c76eea53a6a7
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth
+      - KEYCLOAK_USER=admin   
+      - KEYCLOAK_PASSWORD=admin
+    networks:  
+      - estory
+
+
+
+#cours
+  cours:
+    build:
+      context: ./MicroServiceCoursPrive
+    ports:
+      - "8990:8990"
+    image: "cours"
+    depends_on:
+      - eurekaserver
+      - authentification
+      - CoursPrive
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://CoursPrive:5432/CoursPrive
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_CLIENT_ID=CoursMicroservice
+      - KEYCLOAK_CLIENT_SECRET=77e465d6-3f9d-4e37-a6ed-b258c256020e
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth
+      - KEYCLOAK_USER=admin   
+      - KEYCLOAK_PASSWORD=admin
+    networks:  
+      - estory
+
+
+
+#evaluation
+  evaluation:
+    build:
+      context: ./MicroserviceEvaluation
+    ports:
+      - "8097:8097"
+    image: "evaluation"
+    depends_on:
+      - eurekaserver
+      - authentification
+      - evaluationdata
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eurekaserver:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://evaluationdata:5432/evaluationdata
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - KEYCLOAK_CLIENT_ID=EvaluationMicroservice
+      - KEYCLOAK_CLIENT_SECRET=4f413316-b1ce-43e4-8a56-6647b2c7e86b
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth
+      - KEYCLOAK_USER=admin   
+      - KEYCLOAK_PASSWORD=admin
+    networks:  
+      - estory
+        
+
+
+#keycloak
+  keycloak:
+    image: keycloak:12.0.4
+    ports:
+      - "8180:8180"
+    volumes:
+     - keycloak-datakey:/opt/jboss/keycloak/standalone/data
+    environment:
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8180/auth/realms/E-story
+      - DB_VENDOR=H2
+      - KC_HTTP_PORT= 8180
+    networks:
+      - estory
+
+
+volumes:
+  keycloak-datakey:
+  postgres-data:
+  postgres-reclamationdata:
+  postgres-EStory:
+  postgres-CoursPrive:
+  postgres-evaluationdata:
+
+networks:
+ estory:
+   driver: bridge

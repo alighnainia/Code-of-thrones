@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3766ec1-3902-4652-b82d-17db0da3ac4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/ApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/KeycloakSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/SpringDocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Config/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Controller/CataloguesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Controller/LivreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Entity/Age.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Entity/Catalogues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Entity/Livre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Entity/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Entity/langue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/MicroServiceCataloguesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Repository/CataloguesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Repository/LivreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Service/IServiceCatalogues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Service/IServiceLivre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Service/PdfService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Service/ServiceCatalogues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/Service/ServiceLivre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/feign/Demande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/java/com/example/microservicecatalogues/feign/IServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCatalogues/src/test/java/com/example/microservicecatalogues/MicroServiceCataloguesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/ApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/KeycloakSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/SpringDocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Controller/DemandeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Controller/feignClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Entity/Demande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Entity/Matiere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Entity/Niveau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/MicroServiceCoursPriveApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Repository/DemandeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Service/IServiceDemande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/java/com/example/microservicecoursprive/Service/ServiceDemande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MicroServiceCoursPrive/src/test/java/com/example/microservicecoursprive/MicroServiceCoursPriveApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MicroServiceCatalogues" />
+  </component>
+  <component name="ProjectId" id="2XHLSBXA0GRbUl8JlCkwdGz9EG2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3766ec1-3902-4652-b82d-17db0da3ac4a" name="Changes" comment="" />
+      <created>1698281058241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698281058241</updated>
+      <workItem from="1698281059782" duration="299000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
